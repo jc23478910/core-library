@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>ライブラリ</title>
-<link rel="stylesheet" type="text/css" href="pagetop.css" media="all" />
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="smoothscroll.js"></script>
 <script type="text/javascript" src="library.js"></script>
 <script type="text/javascript">
 $(function(){
-    $("#hoge").pageScrollList();
-    $(".hover").rollOver({act:"_act2",now:"act"});
+    $(".hover").core_rollOver({now:"now"});
+    $("#hover2").core_rollOver();
+    $("#form").core_validation({loadCloudCss : true});
+
 });
 </script>
 <style type="text/css">
@@ -19,24 +19,30 @@ $(function(){
         width: 650px;
         margin: 0 auto;
         padding: 30px;
-        background: #dbd6d6;
+        background: #FFFFD9;
         color: #2544a2;
+    }
+    section {
+        margin-bottom:150px;
     }
 </style>
 </head>
 <body>
 <div id="main">
-    <section style="margin-top:160px;">
+    <section>
+        <h2>ロールオーバー</h2>
         <img src="rollover.gif" class="hover">
         <img src="rollover.gif" class="hover">
-        <img src="rollover.gif" class="hover">
-        <img src="rollover.gif" class="hover act">
-        <h2 id="sec1" class="scrollPoint clearfix">見出し見出し1</h2>
-        <p> テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <img src="rollover.gif" id="hover2">
+        <img src="rollover.gif" class="hover now">
     </section>
     <section>
-        <h2 id="sec2" class="scrollPoint clearfix">見出し見出し2</h2>
-        <p> テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <h2>バリデーション</h2>
+        <form id="form">
+            <p><input type="text" id="aaa" class="required aaa"/></p>
+            <p><input type="text" class="max_20" /></p>
+            <p><input type="checkbox" /></p>
+        </form>
     </section>
     <section>
         <h2 id="sec3" class="scrollPoint clearfix">見出し見出し3</h2>

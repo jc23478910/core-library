@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.core_vali {
+	position: relative;
+}
+
+.core_vali .core_err {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
